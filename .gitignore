@@ -1,0 +1,29 @@
+# Environnements virtuels
+venv/
+.venv/
+env/
+
+# Fichiers compilés Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Fichiers sensibles ou secrets
+.env
+
+# PyCharm
+.idea/
+
+# VSCode
+.vscode/
+
+# Bases de données locales et fichiers de migration
+*.sqlite3
+*.db
+migrations/
+
+# Logs
+*.log
+
+# Fichiers temporaires
+*.tmp
