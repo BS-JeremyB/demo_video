@@ -27,16 +27,20 @@ def load_user(user_id):
 
 
 #Importation des blueprints
-from routes.movie_routes import movie_bp
-from routes.director_routes import director_bp
-from routes.auth_routes import auth_bp
-from routes.main_routes import main_bp
+from routes.templates.movie_routes import movie_bp
+from routes.templates.director_routes import director_bp
+from routes.templates.auth_routes import auth_bp
+from routes.templates.main_routes import main_bp
+from routes.api.director_api_routes import director_api_bp
+from routes.api.movie_api_routes import movie_api_bp
 
 #Enregistrement des blueprints
 app.register_blueprint(movie_bp)
 app.register_blueprint(director_bp)
 app.register_blueprint(auth_bp)
 app.register_blueprint(main_bp)
+app.register_blueprint(director_api_bp, url_prefix='/api')
+app.register_blueprint(movie_api_bp, url_prefix='/api')
 
 
 if __name__ == '__main__':
